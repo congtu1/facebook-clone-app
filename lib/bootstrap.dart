@@ -3,6 +3,8 @@ import 'dart:developer';
 
 import 'package:bloc/bloc.dart';
 import 'package:flutter/widgets.dart';
+import 'package:happy_app/injection/dependency_manager.dart';
+import 'package:happy_app/utilities/helpers/app_helper/app_flavor_helper.dart';
 
 class AppBlocObserver extends BlocObserver {
   const AppBlocObserver();
@@ -24,9 +26,10 @@ Future<void> bootstrap(FutureOr<Widget> Function() builder) async {
   FlutterError.onError = (details) {
     log(details.exceptionAsString(), stackTrace: details.stack);
   };
+    WidgetsFlutterBinding.ensureInitialized();
 
   Bloc.observer = const AppBlocObserver();
-
+  await DependencyManager.inject(AppFlavor.development);
   await runZonedGuarded(
     () async => runApp(await builder()),
     (error, stackTrace) => log(error.toString(), stackTrace: stackTrace),
