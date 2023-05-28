@@ -26,7 +26,7 @@ Future<void> bootstrap(FutureOr<Widget> Function() builder) async {
   FlutterError.onError = (details) {
     log(details.exceptionAsString(), stackTrace: details.stack);
   };
-    WidgetsFlutterBinding.ensureInitialized();
+  WidgetsFlutterBinding.ensureInitialized();
 
   Bloc.observer = const AppBlocObserver();
   await DependencyManager.inject(AppFlavor.development);

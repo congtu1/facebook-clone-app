@@ -4,7 +4,9 @@ class AppColors {
   AppColors._();
 
   static ColorsDefine get value {
-    final brightness = Theme.of(injector.get<AppRouter>().navigatorKey.currentContext!).brightness;
+    final brightness =
+        Theme.of(injector.get<AppRouter>().navigatorKey.currentContext!)
+            .brightness;
     switch (brightness) {
       case Brightness.light:
         return ColorsDefine.colorsLight;

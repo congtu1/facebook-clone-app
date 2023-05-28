@@ -7,9 +7,6 @@ class AuthRepositoryImpl implements AuthRepository {
 
   final _preference = injector.get<SharePreferenceDataSource>();
 
-
-
-  
   @override
   Future<void> clearAllAuthLocalData() => _preference.clearAllAuthData();
 

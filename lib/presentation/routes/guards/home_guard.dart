@@ -8,9 +8,6 @@ class HomeGuard extends AutoRouteGuard {
   void onNavigation(NavigationResolver resolver, StackRouter router) {
     final token = injector.get<GetAccessTokenLocalUseCase>().run();
     if (token == null) {
-  
-    } else {
-    
-    }
+    } else {}
   }
 }

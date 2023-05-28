@@ -11,6 +11,5 @@ class SplashModule extends BaseModule<SplashPresenter> {
     injector.registerFactory<SplashPresenter>(
       () => SplashPresenter(),
     );
-    
   }
 }

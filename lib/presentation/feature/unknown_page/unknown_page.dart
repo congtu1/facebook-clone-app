@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:happy_app/presentation/core/base_page/base_bloc/base_presenter.dart';
 import 'package:happy_app/presentation/core/base_page/base_page.dart';
 
-@RoutePage()    
+@RoutePage()
 class UnknownPage extends BasePage {
   const UnknownPage({super.key});
 

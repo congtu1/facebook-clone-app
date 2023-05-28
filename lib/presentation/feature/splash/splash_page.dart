@@ -11,7 +11,7 @@ import 'package:happy_app/presentation/feature/splash/components/example_compone
 /// Module:      [SplashModule]
 /// Presenter:   [SplashPresenter]
 /// State:       [SplashState]
-/// Description: 
+/// Description:
 /// TODO: This is [SplashPage]
 
 @RoutePage()
@@ -22,8 +22,7 @@ class SplashPage extends BasePage {
   State<SplashPage> createState() => _SplashPageState();
 }
 
-class _SplashPageState
-    extends BasePageState<SplashPage, SplashPresenter> {
+class _SplashPageState extends BasePageState<SplashPage, SplashPresenter> {
   @override
   PreferredSizeWidget? buildAppBar(BuildContext context) => AppBar(
         //TODO: (remove) App bar of new page
@@ -50,6 +49,4 @@ class _SplashPageState
 ///==========================================================================///
 ///=> Behavior of the [SplashPage]
 ///==========================================================================///
-extension _SplashPageBehavior on _SplashPageState {
- 
-}
+extension _SplashPageBehavior on _SplashPageState {}

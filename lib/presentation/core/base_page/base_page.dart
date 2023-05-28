@@ -15,7 +15,8 @@ abstract class BasePage extends StatefulWidget {
 }
 
 abstract class BasePageState<Page extends BasePage,
-    Presenter extends BasePresenter<dynamic>> extends State<Page> with BasePageMixin {
+        Presenter extends BasePresenter<dynamic>> extends State<Page>
+    with BasePageMixin {
   late Presenter _presenter;
   late LoadingWrapperPresenter _loadingPresenter;
 

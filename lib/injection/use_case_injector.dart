@@ -1,7 +1,3 @@
-
 class UseCaseInjector {
-  static Future<void> register() async {
-
-
-  }
+  static Future<void> register() async {}
 }

@@ -37,7 +37,6 @@ class _AppState extends State<App> with WidgetsBindingObserver {
   void dispose() {
     WidgetsBinding.instance.removeObserver(this);
     _appLifecycle.close();
-    print("a");
     LocaleModule().unRegister();
     super.dispose();
   }
