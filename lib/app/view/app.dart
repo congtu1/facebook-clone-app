@@ -32,12 +32,12 @@ class _AppState extends State<App> with WidgetsBindingObserver {
     _localePresenter = LocaleModule().register();
     _localePresenter.initialLocale();
   }
-  
 
   @override
   void dispose() {
     WidgetsBinding.instance.removeObserver(this);
     _appLifecycle.close();
+    print("a");
     LocaleModule().unRegister();
     super.dispose();
   }
