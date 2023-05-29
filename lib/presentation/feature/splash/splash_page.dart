@@ -31,10 +31,10 @@ class _SplashPageState extends BasePageState<SplashPage, SplashPresenter> {
       );
 
   @override
-  Widget buildBody(BuildContext context) => ExampleComponent(
-        presenter: presenter,
-        //TODO: (remove) presenter will automatically be initialized
-        //after initState() is called. No need to initialize this value
+  Widget buildBody(BuildContext context) => SafeArea(
+        child: Center(
+          child: Text('Abc'),
+        ),
       );
 
   @override
