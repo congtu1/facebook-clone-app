@@ -29,4 +29,5 @@ class SharePreferenceDataSource {
   String? getRefreshToken() => _preferences.getString(
         SharePreferenceKey.refreshToken,
       );
+  String? testString(String test) => test;
 }

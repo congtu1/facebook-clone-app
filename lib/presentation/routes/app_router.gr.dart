@@ -15,33 +15,19 @@ abstract class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
-    UnknownRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const UnknownPage(),
-      );
-    },
     SplashRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const SplashPage(),
       );
     },
+    UnknownRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const UnknownPage(),
+      );
+    },
   };
-}
-
-/// generated route for
-/// [UnknownPage]
-class UnknownRoute extends PageRouteInfo<void> {
-  const UnknownRoute({List<PageRouteInfo>? children})
-      : super(
-          UnknownRoute.name,
-          initialChildren: children,
-        );
-
-  static const String name = 'UnknownRoute';
-
-  static const PageInfo<void> page = PageInfo<void>(name);
 }
 
 /// generated route for
@@ -54,6 +40,20 @@ class SplashRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'SplashRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [UnknownPage]
+class UnknownRoute extends PageRouteInfo<void> {
+  const UnknownRoute({List<PageRouteInfo>? children})
+      : super(
+          UnknownRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'UnknownRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
