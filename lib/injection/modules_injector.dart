@@ -5,8 +5,8 @@ class ModulesInjector {
   static Future<void> register() async {
     // Module loading progress
     LoadingWrapperModule().register();
-   
+
     // Module splash page
-     SplashModule().register();
+    SplashModule().register();
   }
 }
