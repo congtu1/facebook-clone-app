@@ -34,7 +34,7 @@
 /dev/docs/pubspec.yaml
 /dev/integration_tests/**/xcuserdata
 /dev/integration_tests/**/Pods
-/packages/flutter/coverage/
+
 version
 
 # packages file containing multi-root paths
@@ -97,8 +97,6 @@ unlinked_spec.ds
 **/ios/ServiceDefinitions.json
 **/ios/Runner/GeneratedPluginRegistrant.*
 
-# Coverage
-coverage/
 
 # Submodules
 !pubspec.lock

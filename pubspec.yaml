@@ -8,12 +8,48 @@ environment:
 
 dependencies:
   bloc: ^8.1.1
+
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.2
+ 
+  flutter_svg: ^1.1.6
+  responsive_framework: ^0.2.0
+
+  # Net
+  retrofit: ^3.3.1
+  connectivity_plus: ^4.0.1
+  dio: ^4.0.6
+  universal_html: ^2.0.8
+
+  # Utility
+  device_info_plus: ^9.0.1
+  # Persistence
+  shared_preferences: ^2.0.15
+
+  # Architecture
+  freezed: ^2.3.0
+  freezed_annotation: ^2.2.0
+  get_it: ^7.6.0
+  json_annotation: ^4.7.0
+
+  # Web
+  url_strategy: ^0.2.0
+  auto_route: ^7.2.0
+  visibility_detector: ^0.3.3
+  package_info_plus: ^4.0.1
   flutter_localizations:
     sdk: flutter
-  intl: ^0.17.0
+
+  #test
+  mockito: ^5.3.1 
+
+  #Firebase 
+  firebase_core: ^2.13.0
+  cloud_firestore: ^4.7.1
+  firebase_auth: ^4.6.1
+  firebase_storage: ^11.2.1
+
 
 dev_dependencies:
   bloc_test: ^9.1.1
@@ -21,6 +57,9 @@ dev_dependencies:
     sdk: flutter
   mocktail: ^0.3.0
   very_good_analysis: ^4.0.0
+  build_runner: ^2.3.2
+  auto_route_generator: ^7.1.1                   
+
 
 flutter:
   uses-material-design: true
