@@ -4,7 +4,6 @@ import 'package:happy_app/presentation/core/base_page/base_page.dart';
 import 'package:happy_app/presentation/feature/splash/bloc/splash_module.dart';
 import 'package:happy_app/presentation/feature/splash/bloc/splash_presenter.dart';
 import 'package:happy_app/presentation/feature/splash/bloc/splash_state.dart';
-import 'package:happy_app/presentation/feature/splash/components/example_component.dart';
 
 /// Create at:   26/05/2023
 /// Page:        [SplashPage]
