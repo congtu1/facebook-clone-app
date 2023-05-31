@@ -4,19 +4,18 @@ class AppColors {
   AppColors._();
 
   static ColorsDefine get value {
-    final brightness =
-        Theme.of(injector.get<AppRouter>().navigatorKey.currentContext!)
-            .brightness;
-    switch (brightness) {
-      case Brightness.light:
-        return ColorsDefine.colorsLight;
-      case Brightness.dark:
-        return ColorsDefine.colorsDark;
-    }
+    // final brightness =
+    //     Theme.of(injector.get<AppRouter>().navigatorKey.currentContext!)
+    //         .brightness;
+    // switch (brightness) {
+    //   case Brightness.light:
+    return ColorsDefine.colorsLight;
+    // case Brightness.dark:
+    //   return ColorsDefine.colorsDark;
   }
-
-  static const text = Colors.black;
 }
+
+// static const text = Colors.black;
 
 class ColorsDefine {
   const ColorsDefine({
