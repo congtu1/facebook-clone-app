@@ -5,5 +5,6 @@
         "description": "Texto mostrado en la AppBar de la página del contador"
     },
     "facebook": "facebook",
-    "hello": "hello"
+    "hello": "hello",
+    "hi": "hi"
 }
