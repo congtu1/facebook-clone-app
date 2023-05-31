@@ -10,6 +10,7 @@ class ModulesInjector {
     // Module splash page
     SplashModule().register();
 
+    // Module Dashboard Page
     DashboardModule().register();
   }
 }
