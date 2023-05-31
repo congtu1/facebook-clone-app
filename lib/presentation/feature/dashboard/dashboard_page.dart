@@ -35,7 +35,9 @@ class _DashboardPageState
       length: 6,
       vsync: this,
       initialIndex: presenter.state.currentTab,
-    );
+    )..addListener(() {
+        if (tabController.indexIsChanging) {}
+      });
     super.onInitState();
   }
 
@@ -52,102 +54,68 @@ class _DashboardPageState
                 pinned: true,
                 snap: true,
                 floating: true,
-                expandedHeight: 120.0,
-                title: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            AppTexts.value.facebook,
-                            style: TextStyle(
-                              fontSize: 30,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.blue,
-                            ),
-                          ),
-                          Row(
-                            children: [
-                              CircleAvatar(
-                                radius: 20,
-                                backgroundColor: Colors.grey.withOpacity(0.1),
-                                child: Center(
-                                  child: Icon(
-                                    Icons.search,
-                                    color: Colors.black,
-                                  ),
-                                ),
-                              ),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              CircleAvatar(
-                                radius: 20,
-                                backgroundColor: Colors.grey.withOpacity(0.1),
-                                child: Center(
-                                  child: Icon(
-                                    Icons.message,
-                                    color: Colors.black,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      )
-                    ],
+                actions: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                      vertical: 5,
+                    ),
+                    child: CircleAvatar(
+                      radius: 30,
+                      backgroundColor: Colors.grey.withOpacity(0.1),
+                      child: Center(
+                        child: Icon(
+                          Icons.search,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                      vertical: 5,
+                    ),
+                    child: CircleAvatar(
+                      radius: 30,
+                      backgroundColor: Colors.grey.withOpacity(0.1),
+                      child: Center(
+                        child: Icon(
+                          Icons.message,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+                title: Text(
+                  AppTexts.value.facebook,
+                  style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.blue,
                   ),
                 ),
-                //TODO: Will change icon and tab view in future
-                bottom: TabBar(
-                  onTap: presenter.tabChange,
-                  controller: tabController,
-                  tabs: <Widget>[
-                    Tab(
-                      icon: Icon(
-                        Icons.home_outlined,
-                        color: Colors.black,
-                        size: 30,
+                bottom: PreferredSize(
+                  preferredSize: Size.fromHeight(72),
+                  child: Container(
+                    child: TabBar(
+                      onTap: presenter.tabChange,
+                      controller: tabController,
+                      tabs: List.generate(
+                        6,
+                        (index) => Container(
+                          height: 70,
+                          width: double.infinity,
+                          child: Icon(
+                            presenter.state.homeTabs[index].icon,
+                            color: presenter.state.currentTab == index
+                                ? Colors.blue
+                                : presenter.state.homeTabs[index].color,
+                            size: 30,
+                          ),
+                        ),
                       ),
                     ),
-                    Tab(
-                      icon: Icon(
-                        Icons.people_outline,
-                        color: Colors.black,
-                        size: 30,
-                      ),
-                    ),
-                    Tab(
-                      icon: Icon(
-                        Icons.tv,
-                        color: Colors.black,
-                        size: 30,
-                      ),
-                    ),
-                    Tab(
-                      icon: Icon(
-                        Icons.favorite_outline,
-                        color: Colors.black,
-                        size: 30,
-                      ),
-                    ),
-                    Tab(
-                      icon: Icon(
-                        Icons.notifications_on_outlined,
-                        color: Colors.black,
-                        size: 30,
-                      ),
-                    ),
-                    Tab(
-                      icon: Icon(
-                        Icons.notifications_on_outlined,
-                        color: Colors.black,
-                        size: 30,
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
               ),
             ],

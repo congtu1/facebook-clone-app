@@ -17,6 +17,7 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$DashboardState {
   int get currentTab => throw _privateConstructorUsedError;
+  List<HomeTabModel> get homeTabs => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $DashboardStateCopyWith<DashboardState> get copyWith =>
@@ -29,7 +30,7 @@ abstract class $DashboardStateCopyWith<$Res> {
           DashboardState value, $Res Function(DashboardState) then) =
       _$DashboardStateCopyWithImpl<$Res, DashboardState>;
   @useResult
-  $Res call({int currentTab});
+  $Res call({int currentTab, List<HomeTabModel> homeTabs});
 }
 
 /// @nodoc
@@ -46,12 +47,17 @@ class _$DashboardStateCopyWithImpl<$Res, $Val extends DashboardState>
   @override
   $Res call({
     Object? currentTab = null,
+    Object? homeTabs = null,
   }) {
     return _then(_value.copyWith(
       currentTab: null == currentTab
           ? _value.currentTab
           : currentTab // ignore: cast_nullable_to_non_nullable
               as int,
+      homeTabs: null == homeTabs
+          ? _value.homeTabs
+          : homeTabs // ignore: cast_nullable_to_non_nullable
+              as List<HomeTabModel>,
     ) as $Val);
   }
 }
@@ -64,7 +70,7 @@ abstract class _$$_DashboardStateCopyWith<$Res>
       __$$_DashboardStateCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int currentTab});
+  $Res call({int currentTab, List<HomeTabModel> homeTabs});
 }
 
 /// @nodoc
@@ -79,12 +85,17 @@ class __$$_DashboardStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? currentTab = null,
+    Object? homeTabs = null,
   }) {
     return _then(_$_DashboardState(
       currentTab: null == currentTab
           ? _value.currentTab
           : currentTab // ignore: cast_nullable_to_non_nullable
               as int,
+      homeTabs: null == homeTabs
+          ? _value._homeTabs
+          : homeTabs // ignore: cast_nullable_to_non_nullable
+              as List<HomeTabModel>,
     ));
   }
 }
@@ -92,14 +103,23 @@ class __$$_DashboardStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_DashboardState implements _DashboardState {
-  _$_DashboardState({required this.currentTab});
+  _$_DashboardState(
+      {required this.currentTab, required final List<HomeTabModel> homeTabs})
+      : _homeTabs = homeTabs;
 
   @override
   final int currentTab;
+  final List<HomeTabModel> _homeTabs;
+  @override
+  List<HomeTabModel> get homeTabs {
+    if (_homeTabs is EqualUnmodifiableListView) return _homeTabs;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_homeTabs);
+  }
 
   @override
   String toString() {
-    return 'DashboardState(currentTab: $currentTab)';
+    return 'DashboardState(currentTab: $currentTab, homeTabs: $homeTabs)';
   }
 
   @override
@@ -108,11 +128,13 @@ class _$_DashboardState implements _DashboardState {
         (other.runtimeType == runtimeType &&
             other is _$_DashboardState &&
             (identical(other.currentTab, currentTab) ||
-                other.currentTab == currentTab));
+                other.currentTab == currentTab) &&
+            const DeepCollectionEquality().equals(other._homeTabs, _homeTabs));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, currentTab);
+  int get hashCode => Object.hash(
+      runtimeType, currentTab, const DeepCollectionEquality().hash(_homeTabs));
 
   @JsonKey(ignore: true)
   @override
@@ -122,10 +144,14 @@ class _$_DashboardState implements _DashboardState {
 }
 
 abstract class _DashboardState implements DashboardState {
-  factory _DashboardState({required final int currentTab}) = _$_DashboardState;
+  factory _DashboardState(
+      {required final int currentTab,
+      required final List<HomeTabModel> homeTabs}) = _$_DashboardState;
 
   @override
   int get currentTab;
+  @override
+  List<HomeTabModel> get homeTabs;
   @override
   @JsonKey(ignore: true)
   _$$_DashboardStateCopyWith<_$_DashboardState> get copyWith =>
