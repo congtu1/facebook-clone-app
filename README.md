@@ -10,7 +10,13 @@ New app
 
 ---
 
+## Plesase follow this convention for pass CI
+
+ - https://www.conventionalcommits.org/en/v1.0.0/
+
 ## Getting Started 🚀
+
+
 
 This project contains 3 flavors:
 
