@@ -35,9 +35,7 @@ class _DashboardPageState
       length: 6,
       vsync: this,
       initialIndex: presenter.state.currentTab,
-    )..addListener(() {
-        if (tabController.indexIsChanging) {}
-      });
+    );
     super.onInitState();
   }
 
@@ -120,21 +118,22 @@ class _DashboardPageState
               ),
             ],
             body: TabBarView(
-                controller: tabController,
-                children: List.generate(
-                  6,
-                  (index) => ListView.builder(
-                    key: PageStorageKey(index),
-                    itemBuilder: (context, index) => Container(
-                      color: index.isOdd ? Colors.white : Colors.black12,
-                      height: 100.0,
-                      child: Center(
-                        child: Text('$index', textScaleFactor: 5),
-                      ),
+              controller: tabController,
+              children: List.generate(
+                6,
+                (index) => ListView.builder(
+                  key: PageStorageKey(index),
+                  itemBuilder: (context, index) => Container(
+                    color: index.isOdd ? Colors.white : Colors.black12,
+                    height: 100.0,
+                    child: Center(
+                      child: Text('$index', textScaleFactor: 5),
                     ),
-                    itemCount: 20,
                   ),
-                )),
+                  itemCount: 20,
+                ),
+              ),
+            ),
           ),
         ),
         listener: (context, state) {},
