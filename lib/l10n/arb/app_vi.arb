@@ -4,5 +4,6 @@
     "@counterAppBarTitle": {
         "description": "Texto mostrado en la AppBar de la página del contador"
     },
-    "facebook": "facebook"
+    "facebook": "facebook",
+    "hello": "hello"
 }
