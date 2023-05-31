@@ -11,6 +11,8 @@ class DashboardPresenter extends BasePresenter<DashboardState> {
   }) : super(state ?? DashboardState.initial());
 
   void tabChange(int tab) {
-    emit(state.copyWith(currentTab: tab,));
+    emit(state.copyWith(
+      currentTab: tab,
+    ));
   }
 }
