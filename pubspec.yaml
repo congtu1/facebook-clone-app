@@ -50,6 +50,8 @@ dependencies:
   firebase_auth: ^4.6.1
   firebase_storage: ^11.2.1
 
+  intl: ^0.18.0
+
 
 dev_dependencies:
   bloc_test: ^9.1.1
