@@ -391,6 +391,4 @@ class _FriendPageState extends BasePageState<FriendPage, FriendPresenter> {
 ///==========================================================================///
 ///=> Behavior of the [FriendPage]
 ///==========================================================================///
-extension _FriendPageBehavior on _FriendPageState {
-
-}
+extension _FriendPageBehavior on _FriendPageState {}
