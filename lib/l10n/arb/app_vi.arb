@@ -5,6 +5,17 @@
         "description": "Texto mostrado en la AppBar de la página del contador"
     },
     "facebook": "facebook",
-    "hello": "hello",
-    "hi": "hi"
-}
+    "hello": "xin chào",
+    "hi": "xin chào",
+    "friendRequest": "Lời mời kết bạn",
+    "seeAll": "Xem tất cả",
+    "delete": "Xoá",
+    "remove" : "Gỡ",
+    "mutualFriends": "bạn chung",
+    "addFriend": "Thêm bạn bè",
+    "accept": "Chấp nhận",
+    "friends": "Bạn bè",
+    "suggest": "Gợi ý",
+    "youMayKnow": "Những người có thể bạn biết",
+    "week": "Tuần"
+    }

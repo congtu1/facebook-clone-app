@@ -17,27 +17,21 @@ class DashboardState with _$DashboardState {
         homeTabs: [
           HomeTabModel(
             icon: Icons.home_outlined,
-            color: Colors.grey,
           ),
           HomeTabModel(
             icon: Icons.people_outline,
-            color: Colors.grey,
           ),
           HomeTabModel(
             icon: Icons.tv,
-            color: Colors.grey,
           ),
           HomeTabModel(
             icon: Icons.favorite_outline,
-            color: Colors.grey,
           ),
           HomeTabModel(
             icon: Icons.notifications_on_outlined,
-            color: Colors.grey,
           ),
           HomeTabModel(
             icon: Icons.notifications_on_outlined,
-            color: Colors.grey,
           ),
         ],
       );

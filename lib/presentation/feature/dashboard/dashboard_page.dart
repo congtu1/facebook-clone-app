@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:happy_app/presentation/feature/friend/friend_page.dart';
 import 'package:happy_app/presentation/resources/resources.dart';
 
 import './bloc/dashboard_module.dart';
@@ -35,7 +36,11 @@ class _DashboardPageState
       length: 6,
       vsync: this,
       initialIndex: presenter.state.currentTab,
-    );
+    )..addListener(() {
+        if (tabController.indexIsChanging) {
+          presenter.tabChange(tabController.index);
+        }
+      });
     super.onInitState();
   }
 
@@ -52,63 +57,62 @@ class _DashboardPageState
                 pinned: true,
                 snap: true,
                 floating: true,
-                actions: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                      vertical: 5,
-                    ),
-                    child: CircleAvatar(
-                      radius: 30,
-                      backgroundColor: Colors.grey.withOpacity(0.1),
-                      child: Center(
-                        child: Icon(
-                          Icons.search,
-                          color: Colors.black,
+                actions: state.currentTab == 0
+                    ? [
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                            vertical: 5,
+                          ),
+                          child: CircleAvatar(
+                            radius: 30,
+                            backgroundColor: Colors.grey.withOpacity(0.1),
+                            child: Center(
+                              child: Icon(
+                                Icons.search,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ),
                         ),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                      vertical: 5,
-                    ),
-                    child: CircleAvatar(
-                      radius: 30,
-                      backgroundColor: Colors.grey.withOpacity(0.1),
-                      child: Center(
-                        child: Icon(
-                          Icons.message,
-                          color: Colors.black,
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                            vertical: 5,
+                          ),
+                          child: CircleAvatar(
+                            radius: 30,
+                            backgroundColor: Colors.grey.withOpacity(0.1),
+                            child: Center(
+                              child: Icon(
+                                Icons.message,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ),
                         ),
-                      ),
-                    ),
-                  ),
-                ],
-                title: Text(
-                  AppTexts.value.facebook,
-                  style: TextStyle(
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.blue,
-                  ),
-                ),
+                      ]
+                    : null,
+                title: state.currentTab == 0
+                    ? Text(
+                        AppTexts.value.facebook,
+                        style: TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.blue,
+                        ),
+                      )
+                    : null,
                 bottom: PreferredSize(
-                  preferredSize: Size.fromHeight(72),
+                  preferredSize: Size.fromHeight(48),
                   child: Container(
                     child: TabBar(
-                      onTap: presenter.tabChange,
+                      labelColor: Colors.blue,
                       controller: tabController,
+                      unselectedLabelColor: Colors.grey,
                       tabs: List.generate(
                         6,
-                        (index) => Container(
-                          height: 70,
-                          width: double.infinity,
-                          child: Icon(
+                        (index) => Tab(
+                          icon: Icon(
                             presenter.state.homeTabs[index].icon,
-                            color: presenter.state.currentTab == index
-                                ? Colors.blue
-                                : presenter.state.homeTabs[index].color,
-                            size: 30,
                           ),
                         ),
                       ),
@@ -121,16 +125,8 @@ class _DashboardPageState
               controller: tabController,
               children: List.generate(
                 6,
-                (index) => ListView.builder(
+                (index) => FriendPage(
                   key: PageStorageKey(index),
-                  itemBuilder: (context, index) => Container(
-                    color: index.isOdd ? Colors.white : Colors.black12,
-                    height: 100.0,
-                    child: Center(
-                      child: Text('$index', textScaleFactor: 5),
-                    ),
-                  ),
-                  itemCount: 20,
                 ),
               ),
             ),

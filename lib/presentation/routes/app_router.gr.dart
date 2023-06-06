@@ -33,6 +33,12 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const DashboardPage(),
       );
     },
+    FriendRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const FriendPage(),
+      );
+    },
   };
 }
 
@@ -74,6 +80,20 @@ class DashboardRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'DashboardRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [FriendPage]
+class FriendRoute extends PageRouteInfo<void> {
+  const FriendRoute({List<PageRouteInfo>? children})
+      : super(
+          FriendRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'FriendRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
