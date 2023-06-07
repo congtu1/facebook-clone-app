@@ -55,7 +55,4 @@ class _HomePageState extends BasePageState<HomePage, HomePresenter>
 ///=> Behavior of the [HomePage]
 ///==========================================================================///
 extension _HomePageBehavior on _HomePageState {
-  void _onPressButton() {
-    //TODO: (remove) Example of a self-defined method
-  }
 }
