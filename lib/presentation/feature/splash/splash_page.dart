@@ -4,6 +4,7 @@ import 'package:happy_app/presentation/core/base_page/base_page.dart';
 import 'package:happy_app/presentation/feature/splash/bloc/splash_module.dart';
 import 'package:happy_app/presentation/feature/splash/bloc/splash_presenter.dart';
 import 'package:happy_app/presentation/feature/splash/bloc/splash_state.dart';
+import 'package:happy_app/presentation/resources/resources.dart';
 
 /// Create at:   26/05/2023
 /// Page:        [SplashPage]
@@ -32,7 +33,7 @@ class _SplashPageState extends BasePageState<SplashPage, SplashPresenter> {
   @override
   Widget buildBody(BuildContext context) => SafeArea(
         child: Center(
-          child: Text('Abc'),
+          child: Text(AppTexts.value.counterAppBarTitle),
         ),
       );
 

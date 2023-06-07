@@ -53,6 +53,7 @@ class _AppState extends State<App> with WidgetsBindingObserver {
         bloc: _localePresenter,
         buildWhen: (previous, current) => previous.locale != current.locale,
         builder: (context, state) => MaterialApp.router(
+          debugShowCheckedModeBanner: false,
           routerDelegate: _appRouter.delegate(),
           routeInformationParser: _appRouter.defaultRouteParser(),
           locale: state.locale,

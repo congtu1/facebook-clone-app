@@ -95,6 +95,7 @@ abstract class BasePageState<Page extends BasePage,
                 }
               : null,
           child: Scaffold(
+            extendBodyBehindAppBar: true,
             backgroundColor: backgroundColor ?? AppColors.value.background,
             resizeToAvoidBottomInset: resizeToAvoidBottomInset,
             appBar: buildAppBar(context),

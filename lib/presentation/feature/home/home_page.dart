@@ -6,7 +6,6 @@ import './bloc/home_presenter.dart';
 import './bloc/home_state.dart';
 import './components/example_component.dart';
 import '../../core/base_page/base_page.dart';
-import '../../resources/resources.dart';
 
 /// Create at:   31/05/2023
 /// Page:        [HomePage]
