@@ -24,7 +24,8 @@ class HomePage extends BasePage {
 
 class _HomePageState extends BasePageState<HomePage, HomePresenter>
     with TickerProviderStateMixin {
-  late final TabController _tabController;  @override
+  late final TabController _tabController;
+  @override
   void onInitState() {
     // TODO: implement onInitState
     super.onInitState();
