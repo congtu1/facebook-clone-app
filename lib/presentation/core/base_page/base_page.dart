@@ -49,9 +49,7 @@ abstract class BasePageState<Page extends BasePage,
     'Override `buildPage()` instead of `build()`. '
     'If it is required to override build, can ignore this line',
   )
-  Widget build(BuildContext context) {
-    return buildPage(context);
-  }
+  Widget build(BuildContext context) => buildPage(context);
 
   @override
   @Deprecated(
