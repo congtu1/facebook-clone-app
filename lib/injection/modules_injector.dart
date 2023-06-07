@@ -16,6 +16,5 @@ class ModulesInjector {
 
     //Module home page
     HomeModule().register();
-
   }
 }

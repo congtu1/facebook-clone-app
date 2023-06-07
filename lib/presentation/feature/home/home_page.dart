@@ -54,5 +54,4 @@ class _HomePageState extends BasePageState<HomePage, HomePresenter>
 ///==========================================================================///
 ///=> Behavior of the [HomePage]
 ///==========================================================================///
-extension _HomePageBehavior on _HomePageState {
-}
+extension _HomePageBehavior on _HomePageState {}
