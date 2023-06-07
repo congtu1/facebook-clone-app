@@ -1,6 +1,7 @@
 import 'package:happy_app/presentation/components/loading_wrapper/bloc/loading_wrapper_module.dart';
 import 'package:happy_app/presentation/feature/dashboard/bloc/dashboard_module.dart';
 import 'package:happy_app/presentation/feature/home/bloc/home_module.dart';
+import 'package:happy_app/presentation/feature/ji/bloc/ji_module.dart';
 import 'package:happy_app/presentation/feature/splash/bloc/splash_module.dart';
 
 class ModulesInjector {
@@ -16,5 +17,6 @@ class ModulesInjector {
 
     //Module home page
     HomeModule().register();
+    JiModule().register();
   }
 }

@@ -25,6 +25,7 @@ class HomePage extends BasePage {
 class _HomePageState extends BasePageState<HomePage, HomePresenter>
     with TickerProviderStateMixin {
   late final TabController _tabController;
+
   @override
   void onInitState() {
     // TODO: implement onInitState
@@ -33,12 +34,14 @@ class _HomePageState extends BasePageState<HomePage, HomePresenter>
   }
 
   @override
-  Widget buildBody(BuildContext context) => ExampleComponent(
-        tabController: _tabController,
-        presenter: presenter,
-        //TODO: (remove) presenter will automatically be initialized
-        //after initState() is called. No need to initialize this value
-      );
+  Widget buildBody(BuildContext context) {
+    return ExampleComponent(
+      tabController: _tabController,
+      presenter: presenter,
+      //TODO: (remove) presenter will automatically be initialized
+      //after initState() is called. No need to initialize this value
+    );
+  }
 
   @override
   void handlerFutureError(Object? error) {

@@ -26,7 +26,7 @@ class ExampleComponent extends StatelessWidget {
             child: Container(
               color: Colors.grey[400],
               child: Column(
-                children: [
+                children: <Widget>[
                   PostStatus(),
                   SizedBox(
                     height: 10,
@@ -35,141 +35,9 @@ class ExampleComponent extends StatelessWidget {
                   SizedBox(
                     height: 10,
                   ),
-                  ListView.builder(
-                    physics: NeverScrollableScrollPhysics(),
-                    shrinkWrap: true,
-                    itemCount: 10,
-                    itemBuilder: (BuildContext context, int index) {
-                      return Container(
-                        margin: EdgeInsets.all(2),
-                        color: Colors.white,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(
-                                left: 15,
-                              ),
-                              child: ListTile(
-                                leading: const CircleAvatar(
-                                  backgroundImage:
-                                      NetworkImage('https://picsum.photos/200'),
-                                ),
-                                title: const Text('User Name'),
-                                subtitle: const Text('1 hr'),
-                                trailing: Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    IconButton(
-                                        onPressed: () {},
-                                        icon: const Icon(
-                                          Icons.more_horiz,
-                                        )),
-                                    IconButton(
-                                        onPressed: () {},
-                                        icon: const Icon(
-                                          Icons.cancel,
-                                        )),
-                                  ],
-                                ),
-                                contentPadding:
-                                    const EdgeInsets.symmetric(horizontal: 0),
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: 15,
-                                vertical: 5,
-                              ),
-                              child: const Text('thích thì đăng'),
-                            ),
-                            Container(
-                                height: MediaQuery.of(context).size.width,
-                                child:
-                                    Image.network('https://picsum.photos/400')),
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: 15,
-                              ),
-                              child: ListTile(
-                                leading: Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    const Icon(Icons.favorite),
-                                    Text('16.114')
-                                  ],
-                                ),
-                                trailing: Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    const Text('214 bình luận'),
-                                    const SizedBox(
-                                      width: 5,
-                                    ),
-                                    Container(
-                                      width: 3.0,
-                                      height: 3.0,
-                                      decoration: const BoxDecoration(
-                                        color: Colors.black,
-                                        shape: BoxShape.circle,
-                                      ),
-                                    ),
-                                    const SizedBox(
-                                      width: 5,
-                                    ),
-                                    const Text('214 lượt chia sẻ'),
-                                  ],
-                                ),
-                                contentPadding:
-                                    const EdgeInsets.symmetric(horizontal: 0),
-                              ),
-                            ),
-                            Container(
-                              height: 0.5,
-                              color: Colors.grey[400],
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                                Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    IconButton(
-                                      icon: Icon(Icons.thumb_up_alt_outlined),
-                                      onPressed: () {},
-                                    ),
-                                    Text('Thích')
-                                  ],
-                                ),
-                                Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    IconButton(
-                                      icon: Icon(Icons.thumb_up),
-                                      onPressed: () {},
-                                    ),
-                                    Text('Thích')
-                                  ],
-                                ),
-                                Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    IconButton(
-                                      icon: Icon(Icons.thumb_up),
-                                      onPressed: () {},
-                                    ),
-                                    Text('Thích')
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      );
-                    },
+                  ...List.generate(
+                    6,
+                    (index) => News(),
                   ),
                 ],
               ),
@@ -177,4 +45,136 @@ class ExampleComponent extends StatelessWidget {
           ),
         ),
       );
+}
+
+class News extends StatelessWidget {
+  const News({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.only(bottom: 10),
+      color: Colors.white,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(
+              left: 15,
+            ),
+            child: ListTile(
+              leading: const CircleAvatar(
+                backgroundImage: NetworkImage('https://picsum.photos/200'),
+              ),
+              title: const Text('User Name'),
+              subtitle: const Text('1 hr'),
+              trailing: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.more_horiz,
+                      )),
+                  IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.cancel,
+                      )),
+                ],
+              ),
+              contentPadding: const EdgeInsets.symmetric(horizontal: 0),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 15,
+              vertical: 5,
+            ),
+            child: const Text('thích thì đăng'),
+          ),
+          Container(
+              height: MediaQuery.of(context).size.width,
+              child: Image.network('https://picsum.photos/400')),
+          const SizedBox(
+            height: 10,
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 15,
+            ),
+            child: ListTile(
+              leading: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [const Icon(Icons.favorite), Text('16.114')],
+              ),
+              trailing: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const Text('214 bình luận'),
+                  const SizedBox(
+                    width: 5,
+                  ),
+                  Container(
+                    width: 3.0,
+                    height: 3.0,
+                    decoration: const BoxDecoration(
+                      color: Colors.black,
+                      shape: BoxShape.circle,
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 5,
+                  ),
+                  const Text('214 lượt chia sẻ'),
+                ],
+              ),
+              contentPadding: const EdgeInsets.symmetric(horizontal: 0),
+            ),
+          ),
+          Container(
+            height: 0.5,
+            color: Colors.grey[400],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  IconButton(
+                    icon: Icon(Icons.thumb_up_alt_outlined),
+                    onPressed: () {},
+                  ),
+                  Text('Thích')
+                ],
+              ),
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  IconButton(
+                    icon: Icon(Icons.mode_comment_outlined),
+                    onPressed: () {},
+                  ),
+                  Text('Thích')
+                ],
+              ),
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  IconButton(
+                    icon: Icon(Icons.share),
+                    onPressed: () {},
+                  ),
+                  Text('Thích')
+                ],
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
 }

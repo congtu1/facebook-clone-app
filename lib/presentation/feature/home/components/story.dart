@@ -66,7 +66,7 @@ class Story extends StatelessWidget {
                 );
               },
             ),
-          ),
+          )
         ],
       ),
     );
