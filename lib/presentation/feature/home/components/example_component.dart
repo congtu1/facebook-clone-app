@@ -74,15 +74,17 @@ class News extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   IconButton(
-                      onPressed: () {},
-                      icon: const Icon(
-                        Icons.more_horiz,
-                      )),
+                    onPressed: () {},
+                    icon: const Icon(
+                      Icons.more_horiz,
+                    ),
+                  ),
                   IconButton(
-                      onPressed: () {},
-                      icon: const Icon(
-                        Icons.cancel,
-                      )),
+                    onPressed: () {},
+                    icon: const Icon(
+                      Icons.cancel,
+                    ),
+                  ),
                 ],
               ),
               contentPadding: const EdgeInsets.symmetric(horizontal: 0),
@@ -96,8 +98,9 @@ class News extends StatelessWidget {
             child: const Text('thích thì đăng'),
           ),
           Container(
-              height: MediaQuery.of(context).size.width,
-              child: Image.network('https://picsum.photos/400')),
+            height: MediaQuery.of(context).size.width,
+            child: Image.network('https://picsum.photos/400'),
+          ),
           const SizedBox(
             height: 10,
           ),

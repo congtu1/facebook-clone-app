@@ -118,26 +118,29 @@ class _DashboardPageState
                 ),
               ),
             ],
-            body: TabBarView(controller: tabController, children: [
-              const HomePage(
-                key: PageStorageKey('home'),
-              ),
-              const HomePage(
-                key: PageStorageKey('home1'),
-              ),
-              const HomePage(
-                key: PageStorageKey('home2'),
-              ),
-              const HomePage(
-                key: PageStorageKey('home3'),
-              ),
-              const HomePage(
-                key: PageStorageKey('home4'),
-              ),
-              const HomePage(
-                key: PageStorageKey('home5'),
-              ),
-            ]),
+            body: TabBarView(
+              controller: tabController,
+              children: [
+                const HomePage(
+                  key: PageStorageKey('home'),
+                ),
+                const HomePage(
+                  key: PageStorageKey('home1'),
+                ),
+                const HomePage(
+                  key: PageStorageKey('home2'),
+                ),
+                const HomePage(
+                  key: PageStorageKey('home3'),
+                ),
+                const HomePage(
+                  key: PageStorageKey('home4'),
+                ),
+                const HomePage(
+                  key: PageStorageKey('home5'),
+                ),
+              ],
+            ),
           ),
         ),
         listener: (context, state) {},

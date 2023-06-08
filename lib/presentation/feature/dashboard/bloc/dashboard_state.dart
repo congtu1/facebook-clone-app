@@ -7,10 +7,10 @@ part 'dashboard_state.freezed.dart';
 
 @freezed
 class DashboardState with _$DashboardState {
-  factory DashboardState(
-      {required int currentTab,
-      required List<HomeTabModel> homeTabs //TODO: (remove) Example state
-      }) = _DashboardState;
+  factory DashboardState({
+    required int currentTab,
+    required List<HomeTabModel> homeTabs, //TODO: (remove) Example state
+  }) = _DashboardState;
 
   factory DashboardState.initial() => DashboardState(
         currentTab: 0,
