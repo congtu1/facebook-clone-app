@@ -11,7 +11,15 @@
     "seeAll": "Xem tất cả",
     "delete": "Xoá",
     "remove" : "Gỡ",
-    "mutualFriends": "bạn chung",
+    "mutualFriends": "{count} bạn chung",
+    "@mutualFriends": {
+        "description": "mutualFriends count",
+        "placeholders": {
+        "count": {
+            "type": "int"
+            }
+        }
+    },
     "addFriend": "Thêm bạn bè",
     "accept": "Chấp nhận",
     "friends": "Bạn bè",

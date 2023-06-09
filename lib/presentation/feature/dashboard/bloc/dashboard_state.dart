@@ -9,7 +9,7 @@ part 'dashboard_state.freezed.dart';
 class DashboardState with _$DashboardState {
   factory DashboardState(
       {required int currentTab,
-      required List<HomeTabModel> homeTabs //TODO: (remove) Example state
+      required List<HomeTabModel> homeTabs, //TODO: (remove) Example state
       }) = _DashboardState;
 
   factory DashboardState.initial() => DashboardState(

@@ -63,7 +63,7 @@ class LoggerInterceptor extends Interceptor {
         _prettyPrintData(
             data: formDataMap,
             header: 'Form data | ${data.boundary}',
-            isError: false);
+            isError: false,);
       } else {
         _prettyPrintData(
           data: data,
@@ -179,7 +179,7 @@ class LoggerInterceptor extends Interceptor {
     _print(
         text: '$text'
             '${'═' * (maxWidth - text.length)}',
-        isError: isError);
+        isError: isError,);
   }
 
   void _printResponse({

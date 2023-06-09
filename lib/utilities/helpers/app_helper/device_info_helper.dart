@@ -30,7 +30,7 @@ class DeviceInfoHelper {
       .then((packageInfo) => packageInfo.version
           .replaceAll('-production', '')
           .replaceAll('-staging', '')
-          .replaceAll('-development', ''))
+          .replaceAll('-development', ''),)
       .onError((error, stackTrace) => '0.0.0');
 
   static Future<String?> get device async {
