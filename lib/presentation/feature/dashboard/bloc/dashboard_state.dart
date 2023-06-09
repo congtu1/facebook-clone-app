@@ -7,37 +7,31 @@ part 'dashboard_state.freezed.dart';
 
 @freezed
 class DashboardState with _$DashboardState {
-  factory DashboardState(
-      {required int currentTab,
-      required List<HomeTabModel> homeTabs //TODO: (remove) Example state
-      }) = _DashboardState;
+  factory DashboardState({
+    required int currentTab,
+    required List<HomeTabModel> homeTabs, //TODO: (remove) Example state
+  }) = _DashboardState;
 
   factory DashboardState.initial() => DashboardState(
         currentTab: 0,
         homeTabs: [
           HomeTabModel(
             icon: Icons.home_outlined,
-            color: Colors.grey,
           ),
           HomeTabModel(
             icon: Icons.people_outline,
-            color: Colors.grey,
           ),
           HomeTabModel(
             icon: Icons.tv,
-            color: Colors.grey,
           ),
           HomeTabModel(
             icon: Icons.favorite_outline,
-            color: Colors.grey,
           ),
           HomeTabModel(
             icon: Icons.notifications_on_outlined,
-            color: Colors.grey,
           ),
           HomeTabModel(
             icon: Icons.notifications_on_outlined,
-            color: Colors.grey,
           ),
         ],
       );

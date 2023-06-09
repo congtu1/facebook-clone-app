@@ -7,7 +7,6 @@ part 'home_tab_model.freezed.dart';
 class HomeTabModel with _$HomeTabModel {
   const factory HomeTabModel({
     required IconData icon,
-    required Color color,
   }) = _HomeTabModel;
 
   const HomeTabModel._();

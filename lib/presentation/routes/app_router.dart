@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:happy_app/presentation/feature/friend/friend_page.dart';
 
 import '../feature/dashboard/dashboard_page.dart';
 import '../feature/splash/splash_page.dart';
@@ -13,6 +14,6 @@ class AppRouter extends _$AppRouter {
         AutoRoute(
           page: DashboardRoute.page,
           initial: true,
-        )
+        ),
       ];
 }

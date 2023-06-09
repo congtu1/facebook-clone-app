@@ -17,7 +17,6 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$HomeTabModel {
   IconData get icon => throw _privateConstructorUsedError;
-  Color get color => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $HomeTabModelCopyWith<HomeTabModel> get copyWith =>
@@ -30,7 +29,7 @@ abstract class $HomeTabModelCopyWith<$Res> {
           HomeTabModel value, $Res Function(HomeTabModel) then) =
       _$HomeTabModelCopyWithImpl<$Res, HomeTabModel>;
   @useResult
-  $Res call({IconData icon, Color color});
+  $Res call({IconData icon});
 }
 
 /// @nodoc
@@ -47,17 +46,12 @@ class _$HomeTabModelCopyWithImpl<$Res, $Val extends HomeTabModel>
   @override
   $Res call({
     Object? icon = null,
-    Object? color = null,
   }) {
     return _then(_value.copyWith(
       icon: null == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
               as IconData,
-      color: null == color
-          ? _value.color
-          : color // ignore: cast_nullable_to_non_nullable
-              as Color,
     ) as $Val);
   }
 }
@@ -70,7 +64,7 @@ abstract class _$$_HomeTabModelCopyWith<$Res>
       __$$_HomeTabModelCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({IconData icon, Color color});
+  $Res call({IconData icon});
 }
 
 /// @nodoc
@@ -85,17 +79,12 @@ class __$$_HomeTabModelCopyWithImpl<$Res>
   @override
   $Res call({
     Object? icon = null,
-    Object? color = null,
   }) {
     return _then(_$_HomeTabModel(
       icon: null == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
               as IconData,
-      color: null == color
-          ? _value.color
-          : color // ignore: cast_nullable_to_non_nullable
-              as Color,
     ));
   }
 }
@@ -103,16 +92,14 @@ class __$$_HomeTabModelCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_HomeTabModel extends _HomeTabModel {
-  const _$_HomeTabModel({required this.icon, required this.color}) : super._();
+  const _$_HomeTabModel({required this.icon}) : super._();
 
   @override
   final IconData icon;
-  @override
-  final Color color;
 
   @override
   String toString() {
-    return 'HomeTabModel(icon: $icon, color: $color)';
+    return 'HomeTabModel(icon: $icon)';
   }
 
   @override
@@ -120,12 +107,11 @@ class _$_HomeTabModel extends _HomeTabModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_HomeTabModel &&
-            (identical(other.icon, icon) || other.icon == icon) &&
-            (identical(other.color, color) || other.color == color));
+            (identical(other.icon, icon) || other.icon == icon));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, icon, color);
+  int get hashCode => Object.hash(runtimeType, icon);
 
   @JsonKey(ignore: true)
   @override
@@ -135,15 +121,11 @@ class _$_HomeTabModel extends _HomeTabModel {
 }
 
 abstract class _HomeTabModel extends HomeTabModel {
-  const factory _HomeTabModel(
-      {required final IconData icon,
-      required final Color color}) = _$_HomeTabModel;
+  const factory _HomeTabModel({required final IconData icon}) = _$_HomeTabModel;
   const _HomeTabModel._() : super._();
 
   @override
   IconData get icon;
-  @override
-  Color get color;
   @override
   @JsonKey(ignore: true)
   _$$_HomeTabModelCopyWith<_$_HomeTabModel> get copyWith =>
