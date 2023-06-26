@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 
 import '../feature/dashboard/dashboard_page.dart';
+import '../feature/home/home_page.dart';
 import '../feature/splash/splash_page.dart';
 import '../feature/unknown_page/unknown_page.dart';
 

@@ -4,5 +4,7 @@
     "@counterAppBarTitle": {
         "description": "Text shown in the AppBar of the Counter Page"
     },
-    "facebook": "facebook"
+    "facebook": "facebook",
+    "whatDoYouThing": "what do you thing?" 
+
 }

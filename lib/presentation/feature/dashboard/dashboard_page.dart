@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:happy_app/presentation/resources/resources.dart';
 
+import '../home/home_page.dart';
 import './bloc/dashboard_module.dart';
 import './bloc/dashboard_presenter.dart';
 import './bloc/dashboard_state.dart';
@@ -117,22 +118,29 @@ class _DashboardPageState
                 ),
               ),
             ],
+            //TO DO
             body: TabBarView(
               controller: tabController,
-              children: List.generate(
-                6,
-                (index) => ListView.builder(
-                  key: PageStorageKey(index),
-                  itemBuilder: (context, index) => Container(
-                    color: index.isOdd ? Colors.white : Colors.black12,
-                    height: 100.0,
-                    child: Center(
-                      child: Text('$index', textScaleFactor: 5),
-                    ),
-                  ),
-                  itemCount: 20,
+              children: [
+                const HomePage(
+                  key: PageStorageKey('home'),
                 ),
-              ),
+                const HomePage(
+                  key: PageStorageKey('home1'),
+                ),
+                const HomePage(
+                  key: PageStorageKey('home2'),
+                ),
+                const HomePage(
+                  key: PageStorageKey('home3'),
+                ),
+                const HomePage(
+                  key: PageStorageKey('home4'),
+                ),
+                const HomePage(
+                  key: PageStorageKey('home5'),
+                ),
+              ],
             ),
           ),
         ),
