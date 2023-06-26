@@ -47,4 +47,3 @@ class ExampleComponent extends StatelessWidget {
         ),
       );
 }
-
