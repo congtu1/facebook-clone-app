@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:happy_app/presentation/resources/resources.dart';
 
 class PostStatus extends StatelessWidget {
   const PostStatus({
@@ -34,7 +35,7 @@ class PostStatus extends StatelessWidget {
                 alignment: Alignment.centerLeft,
                 child: Padding(
                   padding: const EdgeInsets.only(left: 20),
-                  child: Text('Bạn đang nghĩ gì?'),
+                  child: Text(AppTexts.value.whatDoYouThing),
                 ),
               ),
             ),

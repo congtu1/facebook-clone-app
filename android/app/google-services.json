@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "115482111207",
+    "project_id": "facebook-clone-2a0d0",
+    "storage_bucket": "facebook-clone-2a0d0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:115482111207:android:384b95ecf27a52183dc642",
+        "android_client_info": {
+          "package_name": "com.example.verygoodcore.happy_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9L-Z9gEMO_eoT6gpSsBLNXjXdb-Zp7mo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
